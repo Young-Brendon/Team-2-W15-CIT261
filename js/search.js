@@ -13,18 +13,13 @@ function handleApiResponse(data){
     // Get ul#list
     var list = document.getElementById("list");
 
-    // Store data and display on the page
+    // loop thru JSON data and store needed parts
     var frag = document.createDocumentFragment();
     for (i = 0; i < data.results.length; i++) {
-    	// APP NAME
-    	var appName = document.createElement("li");
-    	appName.innerHTML = "<h3>" + data.results[i].trackName + "</h3>";
-    	frag.appendChild(appName);
-
-    	// APP ICON
-    	var appIcon = document.createElement("img");
-    	appIcon.setAttribute('src', data.results[i].artworkUrl60);
-    	frag.appendChild(appIcon);
+    	// Create tags and insert needed data in them (app name, app url, dev, dev url, etc)
+    	var li = document.createElement("li");
+    	li.innerHTML = "<h3>" + data.results[i].trackName + "</h3>" + "<a href=\"" + data.results[i].trackViewUrl + "\">" + "<img src=\"" + data.results[i].artworkUrl60 + "\">" + "</a>" + "<a href=\"" + data.results[i].sellerUrl + "\">" + data.results[i].sellerName + "</a>";
+    	frag.appendChild(li);
     };
     list.appendChild(frag);
     
