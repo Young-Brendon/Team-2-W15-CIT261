@@ -30,7 +30,6 @@ function handleApiResponse(data){
     	frag.appendChild(li);
     };
     list.appendChild(frag);
-    list.classList.remove("loading");
 }
 
 // a simple event listener for search bar
