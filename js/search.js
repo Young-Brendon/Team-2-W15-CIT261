@@ -27,7 +27,7 @@ function handleApiResponse(data){
     for (i = 0; i < data.results.length; i++) {
     	// Create tags and insert needed data in them (app name, app url, dev, dev url, etc)
     	var li = document.createElement("li");
-    	li.innerHTML = "<a href=\"" + data.results[i].artworkUrl512 + "\" download>" + "<img src=\"" + data.results[i].artworkUrl100 + "\">" + "</a>" + "<a href=\"" + data.results[i].trackViewUrl + "\">" + "<h3>" + data.results[i].trackName + "</h3>" + "</a>" + "<a href=\"" + data.results[i].artistViewUrl + "\">" + "<p>" + data.results[i].sellerName + "</p>" + "</a>" + "<a href=\"" + data.results[i].artworkUrl512 + "\" download>" + "<p>" + "Download &#8690;" + "</p>" + "</a>";
+    	li.innerHTML = "<a href=\"" + data.results[i].artworkUrl512 + "\" download>" + "<img src=\"" + data.results[i].artworkUrl100 + "\">" + "</a>" + "<a href=\"" + data.results[i].trackViewUrl + "\">" + "<h3>" + data.results[i].trackName + "</h3>" + "</a>" + "<a href=\"" + data.results[i].artistViewUrl + "\">" + "<p>" + data.results[i].sellerName + "</p>" + "</a>";
     	frag.appendChild(li);
     };
     list.appendChild(frag);
