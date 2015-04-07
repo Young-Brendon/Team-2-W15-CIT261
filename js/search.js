@@ -37,8 +37,11 @@ document.getElementById('searchBar').addEventListener(
     'submit', search, false
 );
 
-// count how many searchres performed using localstorage
-function visitCount() {
+// count how many searches performed using localstorage
+function searchCount() {
+    // hide iphone keyboard onclick
+    document.activeElement.blur();
+
     str_count = localStorage.getItem("count");
 
     if (str_count == null || str_count == "null"){
