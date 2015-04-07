@@ -138,10 +138,14 @@ input#searchTerm.focus {
 }
 
 #list li a p {
-	margin: 0;
-	padding: 5%;
-	font-size: 0.75em;
+	margin: 5%;
+	font-size: 1em;
 	color: #7890a5;
+}
+
+#list li a h3 {
+	margin: 5%;
+	color: #5ea9dd;
 }
 
 #list li {
