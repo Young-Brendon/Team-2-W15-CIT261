@@ -4,6 +4,7 @@ function search(e) {
     while(clear.firstChild) {
         clear.removeChild(clear.firstChild);
     }
+    document.getElementById("instructions").style.visibility = "hidden";
 
     // JSONP API script
 	e.preventDefault();
