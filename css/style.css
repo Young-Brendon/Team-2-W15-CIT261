@@ -105,7 +105,6 @@ input#searchTerm.focus {
 #button {
 	display: block;
 	margin: 20px auto;
-	/*border: 5px solid #465468;*/
 	border: none;
 	-webkit-border-radius: 4;
 	-moz-border-radius: 4;
@@ -135,6 +134,12 @@ input#searchTerm.focus {
 	margin: 2.5%;
 	background-color: #f5f5f5;
 	color: #5ea9dd;
+}
+
+#list li a:first-child {
+	display: block;
+	min-height: 100px;
+	background: url("../images/loading.gif") 50% no-repeat;
 }
 
 #list li a p {

@@ -1,7 +1,7 @@
 function search(e) {
     // clear any previous search results
     var clear = document.getElementById('list');
-    while(clear.firstChild){
+    while(clear.firstChild) {
         clear.removeChild(clear.firstChild);
     }
 
@@ -30,6 +30,7 @@ function handleApiResponse(data){
     	frag.appendChild(li);
     };
     list.appendChild(frag);
+    list.classList.remove("loading");
 }
 
 // a simple event listener for search bar
@@ -58,3 +59,4 @@ function searchCount() {
     //store count
     localStorage.setItem("count", count);
   } // end count
+
