@@ -22,8 +22,8 @@
 	<div id="wrapper">
 		<section class="main">
 			<form id="searchBar" onsubmit="search()">
-				<input type="text" name="searchTerm" id="searchTerm" placeholder="Search for an app..." spellcheck="false" autofocus>
-				<input type="submit" value="Grab!" id="button">
+				<input type="text" name="searchTerm" id="searchTerm" placeholder="Search an app..." spellcheck="false" autofocus>
+				<input type="submit" value="Grab!" id="button" onclick="visitCount()">
 			</form>
 		</section>
 
@@ -35,6 +35,7 @@
 
 		<footer>
 			<p>Created for Mobile Application Development course, BYU-Idaho, March 2015</p>
+			<p id="lblCounter"></p>
 		</footer>
 	</div>
 	<!-- Scripts -->

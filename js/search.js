@@ -1,4 +1,11 @@
 function search(e) {
+    // clear any previous search results
+    var clear = document.getElementById('list');
+    while(clear.firstChild){
+        clear.removeChild(clear.firstChild);
+    }
+
+    // JSONP API script
 	e.preventDefault();
 	var searchTerm = document.getElementById('searchTerm').value;
 	searchTerm = searchTerm.split(' ').join('+');
@@ -8,6 +15,7 @@ function search(e) {
 }
 
 function handleApiResponse(data){
+    // log iTunes search API data to console for reference
     console.log(data.results);
 
     // Get ul#list
@@ -22,9 +30,28 @@ function handleApiResponse(data){
     	frag.appendChild(li);
     };
     list.appendChild(frag);
-    
 }
 
+// a simple event listener for search bar
 document.getElementById('searchBar').addEventListener(
     'submit', search, false
 );
+
+// count how many searchres performed using localstorage
+function visitCount() {
+    str_count = localStorage.getItem("count");
+
+    if (str_count == null || str_count == "null"){
+      count = 0;
+    } else {
+      count = parseInt(str_count);
+    } // end if
+    //increment count
+    count++;
+    //display count
+    lblCounter = document.getElementById("lblCounter");
+    lblCounter.innerHTML = "You have conducted " + count + " searches";
+    
+    //store count
+    localStorage.setItem("count", count);
+  } // end count
