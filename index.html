@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset=utf-8 />
+	<meta charset="utf-8">
 	<title>iConGrabber</title>
-	<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 	<!-- Logo/Page Header -->
-	<section id="page-header">
-		<a href="http://iconfetcher.com"><img src="images/logo.gif"></a>
-	</section>
+	<header class="page-header">
+		<a href="index.html" id="logo">
+			<img src="images/logo_old.gif">
+			<h1>iConGrabber</h1>
+		</a>
+	</header>
 
 	<!-- Main Search Bar -->
-	<section id="main">
-		<form class="searchBar" onsubmit="search()" id="searchBar">
-			<input type="text" name="searchTerm" id="searchTerm" placeholder="Search for an app..." spellcheck="false" autofocus>
-			<input type="submit" value="Grab!">
-		</form>
-	</section>
+	<div id="wrapper">
+		<section class="main">
+			<form id="searchBar" onsubmit="search()">
+				<input type="text" name="searchTerm" id="searchTerm" placeholder="Search for an app..." spellcheck="false" autofocus>
+				<input type="submit" value="Grab!" id="button">
+			</form>
+		</section>
 
-	<section>
-		<ul id="list">
+		<section class="results">
+			<ul id="list">
 
-		</ul>
-	</section>
+			</ul>
+		</section>
 
+		<footer>
+			<p>Created for Mobile Application Development course, BYU-Idaho, March 2015</p>
+		</footer>
+	</div>
 	<!-- Scripts -->
 	<script type="text/javascript" src="js/search.js"></script>
 </body>

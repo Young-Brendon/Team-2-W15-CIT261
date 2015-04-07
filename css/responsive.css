@@ -1,0 +1,43 @@
+@media screen and (min-width: 480px) {
+
+    /**********************************
+    PAGE: MAIN
+    ***********************************/
+    
+    #list li {
+        width: 28.3333%;
+    }
+
+    #list li:nth-child(4n) {
+        clear: left;
+    }
+
+
+    /**********************************
+    HEADER
+    ***********************************/
+
+    #logo {
+        margin-left: 45%;
+        width: 45%
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 0.825em;
+        margin-bottom: 20px;
+    }
+
+    header {
+        border-bottom: 5px solid #465468;
+        margin-bottom: 60px;
+    }
+
+}
+
+@media screen and (min-width: 660px) {
+    
+}
